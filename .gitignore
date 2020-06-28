@@ -1,0 +1,27 @@
+# R objects #
+###################
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.Rds
+*.rds
+*.h5
+# Archive files #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+# Data files #
+###################
+*.txt
+*.tsv
+*.feather
+# Image files #
+###################
+*.jpg
