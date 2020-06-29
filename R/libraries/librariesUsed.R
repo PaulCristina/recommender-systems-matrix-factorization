@@ -38,6 +38,11 @@ suppressMessages(library(RestRserve))
 suppressMessages(library(feather))
 suppressMessages(library(arrow))
 suppressMessages(library(here))
+## For online data
+suppressMessages(library(curl))
+
+
+
 print("Libraries read")
 
 

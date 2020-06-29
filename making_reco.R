@@ -182,9 +182,9 @@ df.recom_list[, reco := do.call(paste, c(.SD, sep = ";")), .SDcols = cols.to.del
 df.recom_list[, (cols.to.del) := NULL]
 
 
-# save as parquet
-path <- paste0(getwd(),"/R/data/processed/reco_als.parquet")
-write_parquet(df.recom_list, path)
+# save as csv
+path <- paste0(getwd(),"/R/data/processed/reco_als.csv")
+fwrite(df.recom_list, path)
 
 # end timer
 toc(log = TRUE)
@@ -240,9 +240,9 @@ df.recom_sims[, reco := do.call(paste, c(.SD, sep = ";")), .SDcols = cols.to.del
 df.recom_sims[, (cols.to.del) := NULL]
 setnames(df.recom_sims, names(df.recom_sims), c("movies", "similar"))
 
-# save as parquet
-path <- paste0(getwd(),"/R/data/processed/reco_items.parquet")
-write_parquet(df.recom_sims, path)
+# save as csv
+path <- paste0(getwd(),"/R/data/processed/reco_items.csv")
+fwrite(df.recom_sims, path)
 
 # end timer
 toc(log = TRUE)

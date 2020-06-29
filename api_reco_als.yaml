@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: RestRserve OpenAPI
+  version: '1.0'
+servers:
+  - url: /
+paths:
+  /reco:
+    get:
+      description: Generates recommendations using ALS
+      parameters:
+        - name: "x"
+          description: "userId"
+          in: query
+          schema:
+            type: integer
+          example: 1
+          required: true
+      responses:
+        200:
+          description: API response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ["Princess Bride, The (1987)",
+                          "Reservoir Dogs (1992)",
+                          "Indiana Jones and the Last Crusade (1989)",
+                          "Kill Bill: Vol. 1 (2003)",
+                          "Silence of the Lambs, The (1991)",
+                          "Highlander (1986)",
+                          "Finding Nemo (2003)",
+                          "Exorcist, The (1973)",
+                          "Harry Potter and the Goblet of Fire (2005)",
+                          "Star Wars: Episode VI - Return of the Jedi (1983)"]
+        400:
+          description: Bad Request

@@ -23,4 +23,4 @@ Project is made from three parts:
 The library used for recommendation is 
 <https://github.com/rexyai/rsparse> fallowing this excellent post <http://dsnotes.com/post/2017-05-28-matrix-factorization-for-recommender-systems/>.
 
-The model runs extremly fast, it can generate recommendation in ~ 300 secs for 138286 users for ALS and in ~ 200 secs for 8546 using cosine distance.
+The model runs extremly fast, it can generate recommendation in ~ 300 secs for 138286 users for ALS and in ~ 200 secs for 8546 movies using cosine distance.
