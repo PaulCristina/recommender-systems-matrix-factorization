@@ -14,12 +14,16 @@ Project is made from three parts:
 2.  making\_reco, generates recommendation user based (ALS) and item
     based (cosine distance)
 
-3.  api\_reco, which will deliver recommendation for a user using an API
+3.  api\_reco\_als, which will deliver ALS recommendation for a user
+    using an API
 
 The library used for recommendation is
 <https://github.com/rexyai/rsparse> fallowing this excellent post
 <http://dsnotes.com/post/2017-05-28-matrix-factorization-for-recommender-systems/>.
 
+For the API the RestRserve library was used
+<https://restrserve.org/articles/RestRserve.html>.
+
 The model runs extremly fast, it can generate recommendation in ~ 300
-secs for 138286 users for ALS and in ~ 200 secs for 8546 using cosine
-distance.
+secs for 138286 users for ALS and in ~ 200 secs for 8546 movies using
+cosine distance.
