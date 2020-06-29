@@ -1,7 +1,7 @@
-Recommender-systems using matrix-factorization
+Recommender-systems with Rsparse
 ================
 
-## Matrix factorization
+## Collaborative filtering
 
 The goal for this project is to produce recommendation using
 collaborative filtering (matrix factorization & cosine distance).

@@ -12,7 +12,7 @@ print("Script version is: 0.0.1")
 print(paste0("Start process: ", start.overall.time))
 
 # Set project path
-setwd("/home/paulc/projects_Paul/99_usefullTests/recommender-systems-matrix-factorization")
+setwd("/recommender-systems-matrix-factorization")
 #------------------------------------------------------------------------------------------------------------#
 ### 2.0 LOAD LIBRARY'S ----
 # Load libraries
