@@ -18,6 +18,7 @@ setwd("/recommender-systems-matrix-factorization")
 # Load libraries
 source("R/libraries/librariesUsed.R")
 sessionInfo()
+detect_number_omp_threads()
 options("rsparse::rsparse_omp_threads" = 2)
 
 help(package = "rsparse")
@@ -32,8 +33,8 @@ tic("00. Total running time")
 # download data
 # https://grouplens.org/datasets/movielens/
 data_dir <- paste0(getwd(),"/R/data/raw")
-df.movies <- fread(file.path(data_dir, "movies.csv"))
-df.ratings <- fread(file.path(data_dir, "ratings.csv"))
+df.movies <- fread(file.path(data_dir, "movies.csv.gz"))
+df.ratings <- fread(file.path(data_dir, "ratings.csv.gz"))
 glimpse(df.ratings)
 glimpse(df.movies)
 
@@ -177,7 +178,7 @@ df.recom_list[, (cols.to.del) := NULL]
 # transform recommendations to list
 cols.to.del <- NULL
 cols.to.del <- names(df.recom_list[,2:(number_of_Reco+1)])
-df.recom_list[, reco := do.call(paste, c(.SD, sep = ",")), .SDcols = cols.to.del]
+df.recom_list[, reco := do.call(paste, c(.SD, sep = ";")), .SDcols = cols.to.del]
 df.recom_list[, (cols.to.del) := NULL]
 
 
@@ -235,7 +236,7 @@ df.recom_sims[, (cols.to.del) := NULL]
 # transform recommendations to list
 cols.to.del <- NULL
 cols.to.del <- names(df.recom_sims[,2:(number_of_Reco+1)])
-df.recom_sims[, reco := do.call(paste, c(.SD, sep = ",")), .SDcols = cols.to.del]
+df.recom_sims[, reco := do.call(paste, c(.SD, sep = ";")), .SDcols = cols.to.del]
 df.recom_sims[, (cols.to.del) := NULL]
 setnames(df.recom_sims, names(df.recom_sims), c("movies", "similar"))
 

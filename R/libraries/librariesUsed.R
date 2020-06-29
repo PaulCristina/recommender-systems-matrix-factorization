@@ -21,10 +21,6 @@ suppressMessages(library(magrittr))
 ## Recommendation
 suppressMessages(library(rsparse))
 suppressMessages(library(text2vec))
-## Saving data to disk
-suppressMessages(library(feather))
-suppressMessages(library(arrow))
-suppressMessages(library(here))
 ## Exploratory Data Analysis
 suppressMessages(library(summarytools))
 suppressMessages(library(rcompanion))
@@ -36,7 +32,12 @@ suppressMessages(library(AutoExploreR))
 suppressMessages(library(foreach))
 suppressMessages(library(doParallel))
 suppressMessages(library(doSNOW))
-
+## Api
+suppressMessages(library(RestRserve))
+## Saving data to disk
+suppressMessages(library(feather))
+suppressMessages(library(arrow))
+suppressMessages(library(here))
 print("Libraries read")
 
 

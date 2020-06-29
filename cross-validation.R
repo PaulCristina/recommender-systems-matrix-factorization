@@ -28,10 +28,11 @@ help(package = "rsparse")
 # download data
 # https://grouplens.org/datasets/movielens/
 data_dir <- paste0(getwd(),"/R/data/raw")
-df.movies <- fread(file.path(data_dir, "movies.csv"))
-df.ratings <- fread(file.path(data_dir, "ratings.csv"))
+df.movies <- fread(file.path(data_dir, "movies.csv.gz"))
+df.ratings <- fread(file.path(data_dir, "ratings.csv.gz"))
 glimpse(df.ratings)
 glimpse(df.movies)
+
 
 # number of views a movie must have in order
 # to be included in the recommendations
