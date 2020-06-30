@@ -95,3 +95,7 @@ app$add_swagger_ui(path = "/doc",
 ### 7.0 START THE APP ----
 backend = BackendRserve$new()
 backend$start(app, http_port = 8585)
+
+### Check it works ----
+# curl localhost:8585/reco?x=1
+# Check out a swagger UI in the browser: localhost:8585/doc
